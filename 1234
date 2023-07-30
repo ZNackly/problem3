@@ -3,14 +3,14 @@ def start_training(character):
     Принимает на вход имя и класс персонажа.
     Возвращает сообщения о результатах цикла тренировки персонажа.
     """
-    print(f'{Character.__name__}, ты {Character.BRIEF_DESC_CHAR_CLASS}')
+    print(f'{сharacter.__name__}, ты {сharacter.BRIEF_DESC_CHAR_CLASS}')
     print('Потренируйся управлять своими навыками.')
     print('Введи одну из команд: attack — чтобы атаковать противника, '
           'defence — чтобы блокировать атаку противника или '
           'special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
     cmd = None
-    buklet = {'attack':attack(char_name, char_class),'defence':defence(char_name, char_class),'special':special(char_name, char_class)}
+    buklet = {'attack':character.attack(self),'defence':character.defence(self),'special':character.pecial(self)}
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         # Замените блок условных операторов на словарь
@@ -19,5 +19,5 @@ def start_training(character):
         # В функции print() будет вызываться метод класса,
         # который соответствует введённой команде.
         if cmd in buklet:
-            print(Character.bucklet[cmd])
+            print(сharacter.bucklet[cmd])
     return 'Тренировка окончена.'
