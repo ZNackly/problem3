@@ -10,7 +10,7 @@ def start_training(character):
           'special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
     cmd = None
-    buklet = {'attack':character.attack(self),'defence':character.defence(self),'special':character.pecial(self)}
+    action = {'attack':attack(self),'defence':defence(self),'special':special(self)}
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         # Замените блок условных операторов на словарь
@@ -19,5 +19,5 @@ def start_training(character):
         # В функции print() будет вызываться метод класса,
         # который соответствует введённой команде.
         if cmd in buklet:
-            print(сharacter.bucklet[cmd])
+            print(сharacter.action[cmd])
     return 'Тренировка окончена.'
